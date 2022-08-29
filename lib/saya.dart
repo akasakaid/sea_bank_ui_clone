@@ -22,7 +22,7 @@ class _SayaPageState extends State<SayaPage> {
         children: [
           Container(
             width: MediaQuery.of(context).size.width,
-            height: 200,
+            height: 60,
             decoration: const BoxDecoration(
               color: Colors.orange,
               

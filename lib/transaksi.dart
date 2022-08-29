@@ -43,6 +43,15 @@ class _TransaksiPageState extends State<TransaksiPage> {
                   height: 250,
                   decoration: BoxDecoration(
                       color: Colors.white,
+                      boxShadow: [
+                          BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              spreadRadius: 4,
+                              blurRadius: 5,
+                              offset: const Offset(0, 7),
+                          ),
+                      ],
+                      
                       borderRadius: BorderRadius.circular(10)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,114 +75,121 @@ class _TransaksiPageState extends State<TransaksiPage> {
                       Padding(
                         padding: const EdgeInsets.only(top: 10),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.only(left: 40),
-                              child: GestureDetector(
-                                onTap: () {},
-                                child: Column(
-                                  children: [
-                                    Image.asset(
-                                      "assets/images/seabank_icon.png",
-                                      width: 50,
-                                      height: 50,
-                                    ),
-                                    const Padding(
-                                      padding: EdgeInsets.only(top: 10),
-                                      child: Text(
-                                        "SeaBank",
-                                        style: TextStyle(fontSize: 12),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            GestureDetector(
-                              onTap: () {},
-                              child: Column(
-                                children: [
-                                  Container(
-                                    width: 50,
-                                    height: 50,
-                                    decoration: BoxDecoration(
-                                        color: Colors.orange,
-                                        borderRadius:
-                                            BorderRadius.circular(100)),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Image.asset(
-                                        "assets/images/bank_send.png",
+                            Expanded(
+                              flex: 3,
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 20),
+                                child: GestureDetector(
+                                  onTap: () {},
+                                  child: Column(
+                                    children: [
+                                      Image.asset(
+                                        "assets/images/seabank_icon.png",
                                         width: 40,
                                         height: 40,
-                                        color: Colors.white,
                                       ),
-                                    ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(top: 10),
+                                        child: Text("SeaBank",style: TextStyle(fontSize: 12),),
+                                      ),
+                                    ],
                                   ),
-                                  const Padding(
-                                    padding: EdgeInsets.only(top: 10),
-                                    child: Text(
-                                      "Bank Lain",
-                                      style: TextStyle(fontSize: 12),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 30),
-                              child: GestureDetector(
-                                onTap: () {},
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      width: 50,
-                                      height: 50,
-                                      decoration: BoxDecoration(
-                                          color: Colors.orange,
-                                          borderRadius:
-                                              BorderRadius.circular(100)),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Image.asset(
-                                          "assets/images/va.png",
-                                          width: 40,
-                                          height: 40,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
-                                    const Padding(
-                                      padding: EdgeInsets.only(top: 10),
-                                      child: Text("Virtual Account",
-                                          style: TextStyle(fontSize: 12)),
-                                    )
-                                  ],
                                 ),
                               ),
-                            )
+                            ),
+                            Expanded(
+                              flex: 3,
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 0),
+                                child: GestureDetector(
+                                  onTap: () {},
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        width: 40,
+                                        height: 40,
+                                        decoration: BoxDecoration(
+                                          color: Colors.orange,
+                                          borderRadius:
+                                              BorderRadius.circular(100),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(5.0),
+                                          child: Image.asset(
+                                            "assets/images/bank_send.png",
+                                            width: 40,
+                                            height: 40,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(top: 10),
+                                        child: Text("Bank Lain",style: TextStyle(fontSize: 12),),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              flex: 3,
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 0),
+                                child: GestureDetector(
+                                  onTap: () {},
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        width: 40,
+                                        height: 40,
+                                        decoration: BoxDecoration(
+                                          color: Colors.orange,
+                                          borderRadius: BorderRadius.circular(100)
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Image.asset(
+                                            "assets/images/va.png",
+                                            width: 40,
+                                            height: 40,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(top: 10),
+                                        child: Text("Virtual Account",style: TextStyle(fontSize: 12),),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 20),
+                        padding: const EdgeInsets.only(top: 30),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20),
+                            Expanded(
+                              flex: 2,
                               child: GestureDetector(
                                 onTap: () {},
                                 child: Column(
                                   children: [
                                     Container(
-                                      width: 50,
-                                      height: 50,
+                                      width: 40,
+                                      height: 40,
                                       decoration: BoxDecoration(
-                                          color: Colors.orange,
-                                          borderRadius:
-                                              BorderRadius.circular(100)),
+                                        color: Colors.orange,
+                                        borderRadius:
+                                            BorderRadius.circular(100),
+                                      ),
                                       child: Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Image.asset(
@@ -187,31 +203,32 @@ class _TransaksiPageState extends State<TransaksiPage> {
                                     const Padding(
                                       padding: EdgeInsets.only(top: 10),
                                       child: Text(
-                                        "Pulsa & tagihan",
+                                        "Pulsa & Tagihan",
                                         style: TextStyle(fontSize: 12),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20),
+                            Expanded(
+                              flex: 2,
                               child: GestureDetector(
                                 onTap: () {},
                                 child: Column(
                                   children: [
                                     Container(
-                                      width: 50,
-                                      height: 50,
+                                      width: 40,
+                                      height: 40,
                                       decoration: BoxDecoration(
-                                          color: Colors.orange,
-                                          borderRadius:
-                                              BorderRadius.circular(100)),
+                                        color: Colors.orange,
+                                        borderRadius:
+                                            BorderRadius.circular(100),
+                                      ),
                                       child: Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Image.asset(
-                                          "assets/images/va.png",
+                                          "assets/images/wallet.png",
                                           width: 40,
                                           height: 40,
                                           color: Colors.white,
@@ -220,16 +237,18 @@ class _TransaksiPageState extends State<TransaksiPage> {
                                     ),
                                     const Padding(
                                       padding: EdgeInsets.only(top: 10),
-                                      child: Text("Virtual Account",
-                                          style: TextStyle(fontSize: 12)),
-                                    )
+                                      child: Text(
+                                        "Top up E-Wallet",
+                                        style: TextStyle(fontSize: 12),
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
-                            )
+                            ),
                           ],
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

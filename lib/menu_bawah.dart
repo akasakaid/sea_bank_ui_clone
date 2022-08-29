@@ -1,8 +1,7 @@
-import 'package:Seabank/saya.dart';
-import 'package:Seabank/transaksi.dart';
 import 'package:flutter/material.dart';
-
 import 'beranda.dart';
+import 'saya.dart';
+import 'transaksi.dart';
 
 class BottomMenu extends StatefulWidget {
   const BottomMenu({Key? key}) : super(key: key);
