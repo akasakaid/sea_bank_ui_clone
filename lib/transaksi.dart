@@ -8,6 +8,14 @@ class TransaksiPage extends StatefulWidget {
 }
 
 class _TransaksiPageState extends State<TransaksiPage> {
+  int _selectedNavbar = 1;
+
+  void changeSelectedNavbar(int index) {
+    setState(() {
+      _selectedNavbar = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,14 +52,13 @@ class _TransaksiPageState extends State<TransaksiPage> {
                   decoration: BoxDecoration(
                       color: Colors.white,
                       boxShadow: [
-                          BoxShadow(
-                              color: Colors.black.withOpacity(0.2),
-                              spreadRadius: 4,
-                              blurRadius: 5,
-                              offset: const Offset(0, 7),
-                          ),
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.2),
+                          spreadRadius: 4,
+                          blurRadius: 5,
+                          offset: const Offset(0, 7),
+                        ),
                       ],
-                      
                       borderRadius: BorderRadius.circular(10)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,7 +87,7 @@ class _TransaksiPageState extends State<TransaksiPage> {
                             Expanded(
                               flex: 3,
                               child: Padding(
-                                padding: const EdgeInsets.only(left: 20),
+                                padding: const EdgeInsets.only(left: 15),
                                 child: GestureDetector(
                                   onTap: () {},
                                   child: Column(
@@ -92,7 +99,10 @@ class _TransaksiPageState extends State<TransaksiPage> {
                                       ),
                                       const Padding(
                                         padding: EdgeInsets.only(top: 10),
-                                        child: Text("SeaBank",style: TextStyle(fontSize: 12),),
+                                        child: Text(
+                                          "SeaBank",
+                                          style: TextStyle(fontSize: 12),
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -127,7 +137,10 @@ class _TransaksiPageState extends State<TransaksiPage> {
                                       ),
                                       const Padding(
                                         padding: EdgeInsets.only(top: 10),
-                                        child: Text("Bank Lain",style: TextStyle(fontSize: 12),),
+                                        child: Text(
+                                          "Bank Lain",
+                                          style: TextStyle(fontSize: 12),
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -146,9 +159,9 @@ class _TransaksiPageState extends State<TransaksiPage> {
                                         width: 40,
                                         height: 40,
                                         decoration: BoxDecoration(
-                                          color: Colors.orange,
-                                          borderRadius: BorderRadius.circular(100)
-                                        ),
+                                            color: Colors.orange,
+                                            borderRadius:
+                                                BorderRadius.circular(100)),
                                         child: Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Image.asset(
@@ -161,7 +174,10 @@ class _TransaksiPageState extends State<TransaksiPage> {
                                       ),
                                       const Padding(
                                         padding: EdgeInsets.only(top: 10),
-                                        child: Text("Virtual Account",style: TextStyle(fontSize: 12),),
+                                        child: Text(
+                                          "Virtual Account",
+                                          style: TextStyle(fontSize: 12),
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -257,6 +273,7 @@ class _TransaksiPageState extends State<TransaksiPage> {
           ),
         ],
       ),
+
     );
   }
 }

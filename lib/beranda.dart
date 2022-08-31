@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
+import 'package:sea_bank_ui_clone/transaksi.dart';
 
 class BerandaPage extends StatefulWidget {
   const BerandaPage({Key? key}) : super(key: key);
@@ -14,6 +16,7 @@ class _BerandaPageState extends State<BerandaPage> {
 
   @override
   Widget build(BuildContext context) {
+    double widthsize = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -160,7 +163,7 @@ class _BerandaPageState extends State<BerandaPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left: 10),
+                              padding: EdgeInsets.only(left: widthsize * 0.1),
                               child: Row(
                                 children: const [
                                   Text(
@@ -178,9 +181,10 @@ class _BerandaPageState extends State<BerandaPage> {
                                 ],
                               ),
                             ),
-                            const Padding(
-                              padding: EdgeInsets.only(left: 10, top: 5),
-                              child: Text(
+                            Padding(
+                              padding: EdgeInsets.only(
+                                  left: widthsize * 0.1, top: 5),
+                              child: const Text(
                                 "69% p.a",
                                 style: TextStyle(
                                     color: Colors.white,
@@ -215,6 +219,9 @@ class _BerandaPageState extends State<BerandaPage> {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 20),
                             child: GestureDetector(
+                              onTap: () {
+                                pushNewScreenWithRouteSettings(context, screen: TransaksiPage(), settings: RouteSettings(name: '/home'));
+                              },
                               child: Column(
                                 children: [
                                   Image.asset(
@@ -265,6 +272,14 @@ class _BerandaPageState extends State<BerandaPage> {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 20),
                             child: GestureDetector(
+                              onTap: () {
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const TransaksiPage()),
+                                );
+                              },
                               child: Column(
                                 children: [
                                   Image.asset(
@@ -385,7 +400,11 @@ class _BerandaPageState extends State<BerandaPage> {
                       padding: const EdgeInsets.all(14),
                       child: Row(
                         children: const [
-                          Text("Riwayat Transaksi",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),),
+                          Text(
+                            "Riwayat Transaksi",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 15),
+                          ),
                           Icon(Icons.navigate_next)
                         ],
                       ),
